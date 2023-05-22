@@ -16,3 +16,14 @@ private:
     double m_omega;
 };
 
+class InteractingOscillator : public Hamiltonian {
+public:
+    HarmonicOscillator(double omega);
+    double computeLocalEnergy(
+            class WaveFunction& waveFunction,
+            std::vector<std::unique_ptr<class Particle>>& particles
+    );
+
+private:
+    double m_omega;
+};
